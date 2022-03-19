@@ -38,11 +38,14 @@ superheroe_route.put('/:superheroeId', (req, res) => {
   const {
     superheroe,
     real_name,
-    features: { skills, universe },
-    enemies,
+    features_superheroe = { skills_superheroe, universe },
+    enemies
   } = req.body;
   superheroSchema
-    .updateOne({ _id: superheroeId })
+    .updateOne(
+      { _id: superheroeId },
+      { $set: { superheroe, real_name, features_superheroe, enemies } }
+    )
     .then((data) => res.json({ message: data }))
     .catch((error) => res.json({ message: error }));
 });

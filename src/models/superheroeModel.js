@@ -9,7 +9,7 @@ const superheroeSchema = mongoose.Schema({
     type: String,
     require: true,
   },
-  features: {
+  features_superheroe: {
     type: Object,
     require: true,
     skills_superheroe: {
