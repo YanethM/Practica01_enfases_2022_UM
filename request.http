@@ -1,0 +1,13 @@
+###
+POST http://localhost:5000/api/v1/superheroes/superheroe POST/1.1
+Content-Type: application/json
+
+{
+  "superheroe": "Batman",
+  "real_name": "Bruce",
+  "features": [{
+    "skills": ["Money", "Alot money"],
+    "universe": "DC"
+  }],
+  "enemies":["Joker"]
+}
